@@ -56,19 +56,19 @@
   };
 </script>
 
-  <meta name="description" content="javascript是一门充满活力、简单易用的语言，又是一门具有许多复杂微妙技术的语言。即使是经验丰富的javascript开发者，如果没有认真学习的话，也无法真正理解它们，这就是javascript的矛盾之处。由于javascript不必理解就可以使用，因此通常来说很难真正理解语言本身，这就是我们面临的挑战。不满足于只是让代码正常工作，而是想要弄清楚为什么，勇于挑战这条崎岖颠簸的少有人走的路，拥">
-<meta name="keywords" content="博客">
+  <meta name="description" content="Flutter多媒体资源详解本章目标 了解pubspec.yaml文件，数值如何在pubspec.yaml中添加相关配置项 掌握图片资源加载和使用 掌握自定义字体资源的加载和使用 掌握其他资源文件的加载和使用，如：文本、音频、视频文件（难点） 熟练使用如何通过资源达到UI适配（重点） Flutter多媒体资源使用遇到的问题及解决方案">
+<meta name="keywords" content="Flutter">
 <meta property="og:type" content="article">
-<meta property="og:title" content="测试文档">
-<meta property="og:url" content="http://yoursite.com/2019/09/25/My-first-blog-on-my-own-website/index.html">
+<meta property="og:title" content="Flutter学习日记3">
+<meta property="og:url" content="http://yoursite.com/2020/02/27/flutter_learning_log3/index.html">
 <meta property="og:site_name" content="Chen Lianhan">
-<meta property="og:description" content="javascript是一门充满活力、简单易用的语言，又是一门具有许多复杂微妙技术的语言。即使是经验丰富的javascript开发者，如果没有认真学习的话，也无法真正理解它们，这就是javascript的矛盾之处。由于javascript不必理解就可以使用，因此通常来说很难真正理解语言本身，这就是我们面临的挑战。不满足于只是让代码正常工作，而是想要弄清楚为什么，勇于挑战这条崎岖颠簸的少有人走的路，拥">
+<meta property="og:description" content="Flutter多媒体资源详解本章目标 了解pubspec.yaml文件，数值如何在pubspec.yaml中添加相关配置项 掌握图片资源加载和使用 掌握自定义字体资源的加载和使用 掌握其他资源文件的加载和使用，如：文本、音频、视频文件（难点） 熟练使用如何通过资源达到UI适配（重点） Flutter多媒体资源使用遇到的问题及解决方案">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-03-06T04:24:27.729Z">
+<meta property="og:updated_time" content="2020-03-06T04:21:54.911Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="测试文档">
-<meta name="twitter:description" content="javascript是一门充满活力、简单易用的语言，又是一门具有许多复杂微妙技术的语言。即使是经验丰富的javascript开发者，如果没有认真学习的话，也无法真正理解它们，这就是javascript的矛盾之处。由于javascript不必理解就可以使用，因此通常来说很难真正理解语言本身，这就是我们面临的挑战。不满足于只是让代码正常工作，而是想要弄清楚为什么，勇于挑战这条崎岖颠簸的少有人走的路，拥">
-  <link rel="canonical" href="http://yoursite.com/2019/09/25/My-first-blog-on-my-own-website/">
+<meta name="twitter:title" content="Flutter学习日记3">
+<meta name="twitter:description" content="Flutter多媒体资源详解本章目标 了解pubspec.yaml文件，数值如何在pubspec.yaml中添加相关配置项 掌握图片资源加载和使用 掌握自定义字体资源的加载和使用 掌握其他资源文件的加载和使用，如：文本、音频、视频文件（难点） 熟练使用如何通过资源达到UI适配（重点） Flutter多媒体资源使用遇到的问题及解决方案">
+  <link rel="canonical" href="http://yoursite.com/2020/02/27/flutter_learning_log3/">
 
 
 <script id="page-configurations">
@@ -82,7 +82,7 @@
   };
 </script>
 
-  <title>测试文档 | Chen Lianhan</title>
+  <title>Flutter学习日记3 | Chen Lianhan</title>
   
 
 
@@ -221,7 +221,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/25/My-first-blog-on-my-own-website/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/27/flutter_learning_log3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chen Lianhan">
@@ -233,7 +233,7 @@
       <meta itemprop="name" content="Chen Lianhan">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">测试文档
+        <h1 class="post-title" itemprop="name headline">Flutter学习日记3
 
           
         </h1>
@@ -249,7 +249,7 @@
                 
               
 
-              <time title="Erstellt: 2019-09-25 13:48:19" itemprop="dateCreated datePublished" datetime="2019-09-25T13:48:19+08:00">2019-09-25</time>
+              <time title="Erstellt: 2020-02-27 00:00:00" itemprop="dateCreated datePublished" datetime="2020-02-27T00:00:00+08:00">2020-02-27</time>
             </span>
           
             
@@ -260,7 +260,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Bearbeitet am</span>
-                <time title="Geändert am: 2020-03-06 12:24:27" itemprop="dateModified" datetime="2020-03-06T12:24:27+08:00">2020-03-06</time>
+                <time title="Geändert am: 2020-03-06 12:21:54" itemprop="dateModified" datetime="2020-03-06T12:21:54+08:00">2020-03-06</time>
               </span>
             
           
@@ -270,7 +270,7 @@
               </span>
               <span class="post-meta-item-text">in</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/测试用/" itemprop="url" rel="index"><span itemprop="name">测试用</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Flutter/" itemprop="url" rel="index"><span itemprop="name">Flutter</span></a></span>
 
                 
                 
@@ -289,8 +289,42 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>javascript是一门充满活力、简单易用的语言，又是一门具有许多复杂微妙技术的语言。即使是经验丰富的javascript开发者，如果没有认真学习的话，也无法真正理解它们，这就是javascript的矛盾之处。由于javascript不必理解就可以使用，因此通常来说很难真正理解语言本身，这就是我们面临的挑战。不满足于只是让代码正常工作，而是想要弄清楚为什么，勇于挑战这条崎岖颠簸的少有人走的路，拥抱整个javascript</p>
-<a id="more"></a>
+        <h1 id="Flutter多媒体资源详解"><a href="#Flutter多媒体资源详解" class="headerlink" title="Flutter多媒体资源详解"></a>Flutter多媒体资源详解</h1><h2 id="本章目标"><a href="#本章目标" class="headerlink" title="本章目标"></a>本章目标</h2><ol>
+<li>了解pubspec.yaml文件，数值如何在pubspec.yaml中添加相关配置项</li>
+<li>掌握图片资源加载和使用</li>
+<li>掌握自定义字体资源的加载和使用</li>
+<li>掌握其他资源文件的加载和使用，如：文本、音频、视频文件（难点）</li>
+<li>熟练使用如何通过资源达到UI适配（重点）</li>
+<li>Flutter多媒体资源使用遇到的问题及解决方案<a id="more"></a>
+<h2 id="pubspec-yaml文件详解"><a href="#pubspec-yaml文件详解" class="headerlink" title="pubspec.yaml文件详解"></a>pubspec.yaml文件详解</h2>配置文件：格式严格，必须严格注意书写格式，尤其是空格和对齐位置。注意大小写</li>
+</ol>
+<p>注意字符串文件，必须填写正确，填写错误会报错。</p>
+<p>可以引用pub.dev的开源包，也可以使用git资源</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dependeies:</span><br><span class="line">	git:</span><br><span class="line">		库名称:</span><br><span class="line">			git:git://github.com/用户名或者组织名称/库名称.git  #使用https</span><br><span class="line">			git:git@github.com:用户名或者组织名称/库名称.git   #使用ssh</span><br></pre></td></tr></table></figure>
+
+<p>下载或更新资源： <code>pub get ,  Flutter packages get , flutter pub get</code></p>
+<p>更新包：<code>flutter packages upgrade</code></p>
+<h2 id="Flutter处理图片资源详解"><a href="#Flutter处理图片资源详解" class="headerlink" title="Flutter处理图片资源详解"></a>Flutter处理图片资源详解</h2><p>例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">flutter:</span><br><span class="line">	assets:</span><br><span class="line">		- images/img_home.png</span><br><span class="line">		- images/img_tab.png</span><br></pre></td></tr></table></figure>
+
+<h2 id="Flutter处理字体资源详解"><a href="#Flutter处理字体资源详解" class="headerlink" title="Flutter处理字体资源详解"></a>Flutter处理字体资源详解</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">flutter:</span><br><span class="line">	fonts:</span><br><span class="line">		- family:Schyler</span><br><span class="line">		  fonts:</span><br><span class="line">			- asset:fonts/Schyler-Regular.ttf</span><br><span class="line">			- asset:fonts/Schyler-Italic.ttf</span><br><span class="line">				style:italic</span><br><span class="line">				weight:700</span><br></pre></td></tr></table></figure>
+
+<h2 id="Flutter处理文本资源详解"><a href="#Flutter处理文本资源详解" class="headerlink" title="Flutter处理文本资源详解"></a>Flutter处理文本资源详解</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">flutter:</span><br><span class="line">  assets:</span><br><span class="line">   - files/datas.xml</span><br><span class="line">   - files/datas.json</span><br><span class="line">   - files/data.txt</span><br></pre></td></tr></table></figure>
+
+<h2 id="Flutter处理音视频资源详解"><a href="#Flutter处理音视频资源详解" class="headerlink" title="Flutter处理音视频资源详解"></a>Flutter处理音视频资源详解</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">flutter:</span><br><span class="line">  assets:</span><br><span class="line">   - media/intros.mp3</span><br><span class="line">   - media/intros.mp4</span><br><span class="line">   - assets/intros2.mp3</span><br><span class="line">   - assets/intros2.mp4</span><br><span class="line">   - assets/media/intros3.mp3</span><br><span class="line">   - assets/media/intros3.mp4</span><br></pre></td></tr></table></figure>
+
+<p>assets 目录下文件加载方式还有：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./intros.mp3</span><br><span class="line">/intros.mp3</span><br><span class="line">intros.mp3</span><br></pre></td></tr></table></figure>
+
+<p>加载音视频资源需要引用外部的包：</p>
+<ol>
+<li><p>加载音频：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dependencies:</span><br><span class="line"> audioplayers: ^0.13.2</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>加载视频：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dependencies:</span><br><span class="line"> video_player: ^0.10.2+5</span><br></pre></td></tr></table></figure></li>
+</ol>
+
     </div>
 
     
@@ -305,7 +339,7 @@
           
           <div class="post-tags">
             
-              <a href="/tags/博客/" rel="tag"># 博客</a>
+              <a href="/tags/Flutter/" rel="tag"># Flutter</a>
             
           </div>
         
@@ -315,8 +349,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/09/25/广州校区管委会学生助理注意事项/" rel="next" title="广州校区管委会学生助理注意事项">
-                  <i class="fa fa-chevron-left"></i> 广州校区管委会学生助理注意事项
+                <a href="/2020/02/06/flutter_learning_log2/" rel="next" title="Flutter学习日记2">
+                  <i class="fa fa-chevron-left"></i> Flutter学习日记2
                 </a>
               
             </div>
@@ -324,10 +358,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2020/02/05/flutter-learning-log/" rel="prev" title="Flutter学习日记1">
-                  Flutter学习日记1 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -376,6 +406,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Flutter多媒体资源详解"><span class="nav-number">1.</span> <span class="nav-text">Flutter多媒体资源详解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#本章目标"><span class="nav-number">1.1.</span> <span class="nav-text">本章目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pubspec-yaml文件详解"><span class="nav-number">1.2.</span> <span class="nav-text">pubspec.yaml文件详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Flutter处理图片资源详解"><span class="nav-number">1.3.</span> <span class="nav-text">Flutter处理图片资源详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Flutter处理字体资源详解"><span class="nav-number">1.4.</span> <span class="nav-text">Flutter处理字体资源详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Flutter处理文本资源详解"><span class="nav-number">1.5.</span> <span class="nav-text">Flutter处理文本资源详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Flutter处理音视频资源详解"><span class="nav-number">1.6.</span> <span class="nav-text">Flutter处理音视频资源详解</span></a></li></ol></li></ol></div>
+        
       </div>
       <!--/noindex-->
 

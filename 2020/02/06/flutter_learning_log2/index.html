@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+  <link rel="alternate" href="/atom.xml" title="Chen Lianhan" type="application/atom+xml">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Kopieren',
+      copy_success: 'Kopiert',
+      copy_failure: 'Kopieren fehlgeschlagen'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="Flutter 常用组件介绍了解Flutter组件是什么Flutter组件分类文字类型用于描述文字，比如Text，字体的颜色大小，下划线，风格等等 容器类型辅助提示类型列表类型系统主题风格类型交互类型了解常用的Flutter组件有哪些（重点）掌握常用Flutter组件的使用使用Flutter组件构建一个完整的页面布局（难点）构建布局的技巧使用StatelessWidget和StatefulWidg">
+<meta name="keywords" content="Flutter">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Flutter学习日记2">
+<meta property="og:url" content="http://yoursite.com/2020/02/06/flutter_learning_log2/index.html">
+<meta property="og:site_name" content="Chen Lianhan">
+<meta property="og:description" content="Flutter 常用组件介绍了解Flutter组件是什么Flutter组件分类文字类型用于描述文字，比如Text，字体的颜色大小，下划线，风格等等 容器类型辅助提示类型列表类型系统主题风格类型交互类型了解常用的Flutter组件有哪些（重点）掌握常用Flutter组件的使用使用Flutter组件构建一个完整的页面布局（难点）构建布局的技巧使用StatelessWidget和StatefulWidg">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-03-06T04:21:42.969Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Flutter学习日记2">
+<meta name="twitter:description" content="Flutter 常用组件介绍了解Flutter组件是什么Flutter组件分类文字类型用于描述文字，比如Text，字体的颜色大小，下划线，风格等等 容器类型辅助提示类型列表类型系统主题风格类型交互类型了解常用的Flutter组件有哪些（重点）掌握常用Flutter组件的使用使用Flutter组件构建一个完整的页面布局（难点）构建布局的技巧使用StatelessWidget和StatefulWidg">
+  <link rel="canonical" href="http://yoursite.com/2020/02/06/flutter_learning_log2/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Flutter学习日记2 | Chen Lianhan</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Chen Lianhan</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">A student in SEIT of SYSU</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Navigationsleiste an/ausschalten">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>Über</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Kategorien</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
+
+  </li>
+  </ul>
+
+    
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/06/flutter_learning_log2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chen Lianhan">
+      <meta itemprop="description" content="Just a simple programmer!">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chen Lianhan">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Flutter学习日记2
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
+              
+                
+              
+
+              <time title="Erstellt: 2020-02-06 00:00:00" itemprop="dateCreated datePublished" datetime="2020-02-06T00:00:00+08:00">2020-02-06</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2020-03-06 12:21:42" itemprop="dateModified" datetime="2020-03-06T12:21:42+08:00">2020-03-06</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">in</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Flutter/" itemprop="url" rel="index"><span itemprop="name">Flutter</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Flutter-常用组件介绍"><a href="#Flutter-常用组件介绍" class="headerlink" title="Flutter 常用组件介绍"></a>Flutter 常用组件介绍</h1><h2 id="了解Flutter组件是什么"><a href="#了解Flutter组件是什么" class="headerlink" title="了解Flutter组件是什么"></a>了解Flutter组件是什么</h2><h3 id="Flutter组件分类"><a href="#Flutter组件分类" class="headerlink" title="Flutter组件分类"></a>Flutter组件分类</h3><h4 id="文字类型"><a href="#文字类型" class="headerlink" title="文字类型"></a>文字类型</h4><p>用于描述文字，比如<code>Text</code>，字体的颜色大小，下划线，风格等等</p>
+<h4 id="容器类型"><a href="#容器类型" class="headerlink" title="容器类型"></a>容器类型</h4><h4 id="辅助提示类型"><a href="#辅助提示类型" class="headerlink" title="辅助提示类型"></a>辅助提示类型</h4><h4 id="列表类型"><a href="#列表类型" class="headerlink" title="列表类型"></a>列表类型</h4><h4 id="系统主题风格类型"><a href="#系统主题风格类型" class="headerlink" title="系统主题风格类型"></a>系统主题风格类型</h4><h4 id="交互类型"><a href="#交互类型" class="headerlink" title="交互类型"></a>交互类型</h4><h2 id="了解常用的Flutter组件有哪些（重点）"><a href="#了解常用的Flutter组件有哪些（重点）" class="headerlink" title="了解常用的Flutter组件有哪些（重点）"></a>了解常用的Flutter组件有哪些（重点）</h2><h2 id="掌握常用Flutter组件的使用"><a href="#掌握常用Flutter组件的使用" class="headerlink" title="掌握常用Flutter组件的使用"></a>掌握常用Flutter组件的使用</h2><h2 id="使用Flutter组件构建一个完整的页面布局（难点）"><a href="#使用Flutter组件构建一个完整的页面布局（难点）" class="headerlink" title="使用Flutter组件构建一个完整的页面布局（难点）"></a>使用Flutter组件构建一个完整的页面布局（难点）</h2><h3 id="构建布局的技巧"><a href="#构建布局的技巧" class="headerlink" title="构建布局的技巧"></a>构建布局的技巧</h3><h3 id="使用StatelessWidget和StatefulWidget"><a href="#使用StatelessWidget和StatefulWidget" class="headerlink" title="使用StatelessWidget和StatefulWidget"></a>使用StatelessWidget和StatefulWidget</h3><h3 id="根据UI图，构建静态以及可交互的布局"><a href="#根据UI图，构建静态以及可交互的布局" class="headerlink" title="根据UI图，构建静态以及可交互的布局"></a>根据UI图，构建静态以及可交互的布局</h3><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h3 id="本章介绍了Flutter常用组件有哪些"><a href="#本章介绍了Flutter常用组件有哪些" class="headerlink" title="本章介绍了Flutter常用组件有哪些"></a>本章介绍了Flutter常用组件有哪些</h3><h3 id="详细介绍了Flutter常用组件的使用"><a href="#详细介绍了Flutter常用组件的使用" class="headerlink" title="详细介绍了Flutter常用组件的使用"></a>详细介绍了Flutter常用组件的使用</h3><h3 id="如何根据UI图构建一个完整的可交互的布局"><a href="#如何根据UI图构建一个完整的可交互的布局" class="headerlink" title="如何根据UI图构建一个完整的可交互的布局"></a>如何根据UI图构建一个完整的可交互的布局</h3><a id="more"></a>
+<h1 id="页面交互路由与导航详解——路由常用API详解"><a href="#页面交互路由与导航详解——路由常用API详解" class="headerlink" title="页面交互路由与导航详解——路由常用API详解"></a>页面交互路由与导航详解——路由常用API详解</h1><h2 id="掌握路由跳转的几种方式（重点）"><a href="#掌握路由跳转的几种方式（重点）" class="headerlink" title="掌握路由跳转的几种方式（重点）"></a>掌握路由跳转的几种方式（重点）</h2><h3 id="单一页面跳转"><a href="#单一页面跳转" class="headerlink" title="单一页面跳转"></a>单一页面跳转</h3><p>使用 Navigator.of(context).push()或者Navigator.of(context).pop()进行单一页面的跳转</p>
+<h3 id="多个页面路由管理"><a href="#多个页面路由管理" class="headerlink" title="多个页面路由管理"></a>多个页面路由管理</h3><p>使用 Map&lt;String, WidgetBuilder&gt; xxx = {‘pageone’:(builder){return 页面函数();},…};对所有相关的路由页面进行一个统一定义和管理。</p>
+<p>再在MaterialApp里面定义好home（主页面）和initialRoute和routes，其中routes就是上面定义的map路由信息管理。</p>
+<h2 id="路由常用函数API详解"><a href="#路由常用函数API详解" class="headerlink" title="路由常用函数API详解"></a>路由常用函数API详解</h2><h3 id="常用"><a href="#常用" class="headerlink" title="常用"></a>常用</h3><p>push：将设置的router信息推送到Navigator上，实现页面跳转</p>
+<p>of：主要是获取Navigator最近实例的状态</p>
+<p>pop：导航到新页面，或者返回到上个页面</p>
+<p>canPop：判断是否可以导航到新页面</p>
+<p>pushNamed：将命名路由推送到Navigator</p>
+<p>popAndPushNamed：指定一个路由路径，并导肮到新页面</p>
+<p>pushAndRemoveUntil：将给定路由推送到Navigator，删除之前的路由，直到该函数的参数predicate返回true为止。</p>
+<p>popUntil：反复执行pop直到该函数的参数predicate返回true为止</p>
+<h3 id="需要了解"><a href="#需要了解" class="headerlink" title="需要了解"></a>需要了解</h3><p>maybePop：可能会导航到新页面</p>
+<p>pushNamedAndRemoveUntil：将命名路由推送到Navigator，删除先前的路由，直到该函数的参数predicate返回true为止</p>
+<p>pushReplacement：路由替换</p>
+<p>pushReplacementNamed：这个也是替换路由操作。推送一个命名路由到Navigator，新路由完成动画之后处理上一个路由</p>
+<p>removeRoute：从Navigator中删除路由，同时执行Route.dispose操作</p>
+<p>removeRouteBelow：从Navigator中删除路由，同时执行Route.dispose操作，要替换的路由是由传入参数anchorRouter里面的路由</p>
+<p>replace：将Navigator中的路由替换成一个新路由</p>
+<p>replaceRouteBelow：将Navigator中的路由替换成一个新路由，要替换的路由时传入参数anchorRouter里面的路由</p>
+<h2 id="掌握路由的发送和接收数据的使用（难点）"><a href="#掌握路由的发送和接收数据的使用（难点）" class="headerlink" title="掌握路由的发送和接收数据的使用（难点）"></a>掌握路由的发送和接收数据的使用（难点）</h2><h3 id="发送数据"><a href="#发送数据" class="headerlink" title="发送数据"></a>发送数据</h3><h3 id="接收数据"><a href="#接收数据" class="headerlink" title="接收数据"></a>接收数据</h3><h3 id="发送并接收其他页面返回的数据"><a href="#发送并接收其他页面返回的数据" class="headerlink" title="发送并接收其他页面返回的数据"></a>发送并接收其他页面返回的数据</h3><h2 id="熟悉路由使用中遇到的问题及解决"><a href="#熟悉路由使用中遇到的问题及解决" class="headerlink" title="熟悉路由使用中遇到的问题及解决"></a>熟悉路由使用中遇到的问题及解决</h2><h3 id="主题风格的一致性"><a href="#主题风格的一致性" class="headerlink" title="主题风格的一致性"></a>主题风格的一致性</h3><h3 id="主页面和非主页面跳转方式选择不太一样"><a href="#主页面和非主页面跳转方式选择不太一样" class="headerlink" title="主页面和非主页面跳转方式选择不太一样"></a>主页面和非主页面跳转方式选择不太一样</h3><h3 id="Scaffold组件的body属性值为具体组件名称，接收不到路由返回的数据"><a href="#Scaffold组件的body属性值为具体组件名称，接收不到路由返回的数据" class="headerlink" title="Scaffold组件的body属性值为具体组件名称，接收不到路由返回的数据"></a>Scaffold组件的body属性值为具体组件名称，接收不到路由返回的数据</h3><h3 id="目标页面可以写main函数，也可以不写，首页写上main函数，其他页面不写，便于查找和维护"><a href="#目标页面可以写main函数，也可以不写，首页写上main函数，其他页面不写，便于查找和维护" class="headerlink" title="目标页面可以写main函数，也可以不写，首页写上main函数，其他页面不写，便于查找和维护"></a>目标页面可以写main函数，也可以不写，首页写上main函数，其他页面不写，便于查找和维护</h3><h3 id="路由路径的正确性，传参的一致性的问题"><a href="#路由路径的正确性，传参的一致性的问题" class="headerlink" title="路由路径的正确性，传参的一致性的问题"></a>路由路径的正确性，传参的一致性的问题</h3><h2 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h2><h3 id="主要介绍了路由跳转的几种方式"><a href="#主要介绍了路由跳转的几种方式" class="headerlink" title="主要介绍了路由跳转的几种方式"></a>主要介绍了路由跳转的几种方式</h3><h3 id="详细讲解了路由的发送和接受数据的使用"><a href="#详细讲解了路由的发送和接受数据的使用" class="headerlink" title="详细讲解了路由的发送和接受数据的使用"></a>详细讲解了路由的发送和接受数据的使用</h3><h3 id="熟悉路由使用中遇到的问题及解决-1"><a href="#熟悉路由使用中遇到的问题及解决-1" class="headerlink" title="熟悉路由使用中遇到的问题及解决"></a>熟悉路由使用中遇到的问题及解决</h3><p>#Flutter手势操作和事件处理（GestureDetector生命周期）<br>包括点击，长按，滑动，删除等等操作，须知如何用代码实现。</p>
+<h2 id="GestureDetector生命周期（常用）"><a href="#GestureDetector生命周期（常用）" class="headerlink" title="GestureDetector生命周期（常用）"></a>GestureDetector生命周期（常用）</h2><table>
+<thead>
+<tr>
+<th align="center">事件类型</th>
+<th align="center">事件函数名称</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Tap</td>
+<td align="center">onTapDown</td>
+<td align="center">按下</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">onTapUp</td>
+<td align="center">抬起</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">onTap</td>
+<td align="center">点击</td>
+</tr>
+<tr>
+<td align="center">双击</td>
+<td align="center">onDoubleTap</td>
+<td align="center">双击</td>
+</tr>
+<tr>
+<td align="center">长按</td>
+<td align="center">onLongPressStart</td>
+<td align="center">长按开始</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">onLongPress</td>
+<td align="center">长按</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">onLongPressEnd</td>
+<td align="center">长按结束</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">onLongPressUp</td>
+<td align="center">抬起</td>
+</tr>
+<tr>
+<td align="center">Scale</td>
+<td align="center">onScaleStart</td>
+<td align="center">Scale事件开始</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">onScaleUpdate</td>
+<td align="center">Scale事件进行中</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">onScaleEnd</td>
+<td align="center">Scale事件结束</td>
+</tr>
+<tr>
+<td align="center">垂直滑动</td>
+<td align="center">onVerticalDragDown</td>
+<td align="center">垂直滑动按下</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">onVerticalDragStart</td>
+<td align="center">垂直滑动开始</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">onVerticalDragUpdate</td>
+<td align="center">垂直滑动进行中</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">onVerticalDragEnd</td>
+<td align="center">垂直滑动结束</td>
+</tr>
+<tr>
+<td align="center">水平滑动</td>
+<td align="center">onHorizontalDragDown</td>
+<td align="center">水平滑动按下</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">onHorizontalDragStart</td>
+<td align="center">水平滑动开始</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">onHorizontalDragUpdate</td>
+<td align="center">水平滑动进行中</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">onHorizontalDragEnd</td>
+<td align="center">水平滑动结束</td>
+</tr>
+<tr>
+<td align="center">Pan</td>
+<td align="center">onPanDown</td>
+<td align="center">Pan事件按下</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">onPanStart</td>
+<td align="center">Pan事件开始</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">onPanEnd</td>
+<td align="center">Pan事件结束</td>
+</tr>
+</tbody></table>
+<h2 id="GestureDetector多事件混合使用详解"><a href="#GestureDetector多事件混合使用详解" class="headerlink" title="GestureDetector多事件混合使用详解"></a>GestureDetector多事件混合使用详解</h2><h3 id="长按和Pan事件"><a href="#长按和Pan事件" class="headerlink" title="长按和Pan事件"></a>长按和Pan事件</h3><p>点击屏幕  -》  onPanDown  -》  onPanCancel  -》  onLongPressStart  -》  onLongPress  -》  onLongPressEnd  -》  onLongPressUp</p>
+<h3 id="Tap和Pan事件"><a href="#Tap和Pan事件" class="headerlink" title="Tap和Pan事件"></a>Tap和Pan事件</h3><p>点击屏幕  -》  onPanDown  -》  onPanCancel  -》  onTapDown  -》  onTapUp  -》  onTap</p>
+<h3 id="垂直滑动和Pan事件"><a href="#垂直滑动和Pan事件" class="headerlink" title="垂直滑动和Pan事件"></a>垂直滑动和Pan事件</h3><p>点击屏幕  -》  onVerticalDragDown  -》  onPanDown  -》  onPanCancel  -》  onVerticalDragStart  -》  onVerticalDragUpdate  -》  onVerticalEnd</p>
+<h3 id="水平滑动和Pan事件"><a href="#水平滑动和Pan事件" class="headerlink" title="水平滑动和Pan事件"></a>水平滑动和Pan事件</h3><p>点击屏幕  -》  onHorizontalDragDown  -》  onPanDown  -》  onPanCancel  -》  onHorizontalDragStart  -》  onHorizontalDragUpdate  -》onHorizontalDragEnd</p>
+<h3 id="Scale和Tap事件"><a href="#Scale和Tap事件" class="headerlink" title="Scale和Tap事件"></a>Scale和Tap事件</h3><p>点击屏幕  -》  onTapDown  -》  onTapCancel  -》  onScaleStart  -》  onScaleUpdate  -》  onScaleEnd</p>
+<h3 id="双击、Tap和Pan事件"><a href="#双击、Tap和Pan事件" class="headerlink" title="双击、Tap和Pan事件"></a>双击、Tap和Pan事件</h3><p>点击屏幕  -》  onPanDown  -》  onPanCancel  -》  onPanDown  -》  onPanCancel  -》  onDoubleTap</p>
+<p>##常用带事件处理的组件使用详解</p>
+<h3 id="FloatingActionButton"><a href="#FloatingActionButton" class="headerlink" title="FloatingActionButton"></a>FloatingActionButton</h3><h3 id="RaisedButton"><a href="#RaisedButton" class="headerlink" title="RaisedButton"></a>RaisedButton</h3><h3 id="IconButton"><a href="#IconButton" class="headerlink" title="IconButton"></a>IconButton</h3><h3 id="ToggleButtons"><a href="#ToggleButtons" class="headerlink" title="ToggleButtons"></a>ToggleButtons</h3><h2 id="使用Ink和InkWell组件实现事件操作"><a href="#使用Ink和InkWell组件实现事件操作" class="headerlink" title="使用Ink和InkWell组件实现事件操作"></a>使用Ink和InkWell组件实现事件操作</h2><h2 id="手势操作遇到的问题及解决"><a href="#手势操作遇到的问题及解决" class="headerlink" title="手势操作遇到的问题及解决"></a>手势操作遇到的问题及解决</h2><h3 id="Pan和Scale不能同时使用"><a href="#Pan和Scale不能同时使用" class="headerlink" title="Pan和Scale不能同时使用"></a>Pan和Scale不能同时使用</h3><h3 id="垂直和水平事件不能同时使用"><a href="#垂直和水平事件不能同时使用" class="headerlink" title="垂直和水平事件不能同时使用"></a>垂直和水平事件不能同时使用</h3><h3 id="双击事件要获取坐标，需要和Pan事件同时使用"><a href="#双击事件要获取坐标，需要和Pan事件同时使用" class="headerlink" title="双击事件要获取坐标，需要和Pan事件同时使用"></a>双击事件要获取坐标，需要和Pan事件同时使用</h3><h2 id="手势处理综合使用实例操作实战"><a href="#手势处理综合使用实例操作实战" class="headerlink" title="手势处理综合使用实例操作实战"></a>手势处理综合使用实例操作实战</h2><h3 id="GestureDetector"><a href="#GestureDetector" class="headerlink" title="GestureDetector"></a>GestureDetector</h3><h3 id="使用带有事件操作的组件"><a href="#使用带有事件操作的组件" class="headerlink" title="使用带有事件操作的组件"></a>使用带有事件操作的组件</h3><h3 id="使用Ink，InkWell或InkResponse组件"><a href="#使用Ink，InkWell或InkResponse组件" class="headerlink" title="使用Ink，InkWell或InkResponse组件"></a>使用Ink，InkWell或InkResponse组件</h3><h2 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a>总结</h2><h3 id="主要介绍了手势处理的三种方式"><a href="#主要介绍了手势处理的三种方式" class="headerlink" title="主要介绍了手势处理的三种方式"></a>主要介绍了手势处理的三种方式</h3><h3 id="了解GestureDetector生命周期"><a href="#了解GestureDetector生命周期" class="headerlink" title="了解GestureDetector生命周期"></a>了解GestureDetector生命周期</h3><h3 id="通过一个案例讲解，熟悉GestureDetector使用"><a href="#通过一个案例讲解，熟悉GestureDetector使用" class="headerlink" title="通过一个案例讲解，熟悉GestureDetector使用"></a>通过一个案例讲解，熟悉GestureDetector使用</h3><h3 id="了解手势处理遇到的问题及解决"><a href="#了解手势处理遇到的问题及解决" class="headerlink" title="了解手势处理遇到的问题及解决"></a>了解手势处理遇到的问题及解决</h3><h3 id="熟悉常用带事件处理的组件"><a href="#熟悉常用带事件处理的组件" class="headerlink" title="熟悉常用带事件处理的组件"></a>熟悉常用带事件处理的组件</h3><h3 id="掌握Ink、InkWell和InkResponse组件进行事件操作"><a href="#掌握Ink、InkWell和InkResponse组件进行事件操作" class="headerlink" title="掌握Ink、InkWell和InkResponse组件进行事件操作"></a>掌握Ink、InkWell和InkResponse组件进行事件操作</h3><h1 id="Flutter动画处理"><a href="#Flutter动画处理" class="headerlink" title="Flutter动画处理"></a>Flutter动画处理</h1><h2 id="本章目标"><a href="#本章目标" class="headerlink" title="本章目标"></a>本章目标</h2><p>1.掌握Flutter动画的基本使用（重点）</p>
+<p>2.Flare动画的使用（难点）</p>
+<p>3.动画使用中遇到的问题及解决</p>
+<h2 id="Flutter动画的类型"><a href="#Flutter动画的类型" class="headerlink" title="Flutter动画的类型"></a>Flutter动画的类型</h2><h3 id="Tween动画"><a href="#Tween动画" class="headerlink" title="Tween动画"></a>Tween动画</h3><p>有缩放，旋转，平移，透明度，淡入淡出等效果</p>
+<h3 id="AnimatedBuilder"><a href="#AnimatedBuilder" class="headerlink" title="AnimatedBuilder"></a>AnimatedBuilder</h3><p>构建Animated 的类，该类可以加入一些动画组件</p>
+<h3 id="AnimatedContainer"><a href="#AnimatedContainer" class="headerlink" title="AnimatedContainer"></a>AnimatedContainer</h3><p>在Container基础上加入动画效果</p>
+<h3 id="Hero动画"><a href="#Hero动画" class="headerlink" title="Hero动画"></a>Hero动画</h3><p>共享元素动画形式，在不同页面中享用共同元素的内容，页面切换时的无缝对接</p>
+<h3 id="Flare动画"><a href="#Flare动画" class="headerlink" title="Flare动画"></a>Flare动画</h3><p>可以使用代码加载Flare文件</p>
+<h2 id="Tween动画使用方式详解"><a href="#Tween动画使用方式详解" class="headerlink" title="Tween动画使用方式详解"></a>Tween动画使用方式详解</h2><p>动画的要素组成：</p>
+<ol>
+<li>AnimationController:动画的时长、正序逆序    控制器</li>
+<li>Animation：核心实现  内容实现</li>
+<li>Tween：Animation的子类</li>
+</ol>
+<h2 id="Tween和AnimationController的区别"><a href="#Tween和AnimationController的区别" class="headerlink" title="Tween和AnimationController的区别"></a>Tween和AnimationController的区别</h2><h4 id="相同：他们都是Animation的子类型，都具有最小值、最大值的属性。"><a href="#相同：他们都是Animation的子类型，都具有最小值、最大值的属性。" class="headerlink" title="相同：他们都是Animation的子类型，都具有最小值、最大值的属性。"></a>相同：他们都是Animation的子类型，都具有最小值、最大值的属性。</h4><h4 id="不同："><a href="#不同：" class="headerlink" title="不同："></a>不同：</h4><h5 id="1-AnimationController只是一个控制器，包括：动画时长、初始值、结束值等属性。"><a href="#1-AnimationController只是一个控制器，包括：动画时长、初始值、结束值等属性。" class="headerlink" title="1.AnimationController只是一个控制器，包括：动画时长、初始值、结束值等属性。"></a>1.AnimationController只是一个控制器，包括：动画时长、初始值、结束值等属性。</h5><h5 id="2-Tween用于转化动画输出的对象，可以通过调用animate函数，传入各种丰富的动画类型，比如CurvedAnimation动画。"><a href="#2-Tween用于转化动画输出的对象，可以通过调用animate函数，传入各种丰富的动画类型，比如CurvedAnimation动画。" class="headerlink" title="2.Tween用于转化动画输出的对象，可以通过调用animate函数，传入各种丰富的动画类型，比如CurvedAnimation动画。"></a>2.Tween用于转化动画输出的对象，可以通过调用animate函数，传入各种丰富的动画类型，比如CurvedAnimation动画。</h5><h5 id="3-AnimationController可以单独使用，但是Tween离不开AnimationController。"><a href="#3-AnimationController可以单独使用，但是Tween离不开AnimationController。" class="headerlink" title="3.AnimationController可以单独使用，但是Tween离不开AnimationController。"></a>3.AnimationController可以单独使用，但是Tween离不开AnimationController。</h5><h2 id="AnimatedBuilder处理动画详解"><a href="#AnimatedBuilder处理动画详解" class="headerlink" title="AnimatedBuilder处理动画详解"></a>AnimatedBuilder处理动画详解</h2><p>关键属性：</p>
+<ol>
+<li>animation 传入一个Animation对象。</li>
+<li>builder 这里用于构建动画形式。</li>
+</ol>
+<h2 id="AnimatedContainer处理动画详解"><a href="#AnimatedContainer处理动画详解" class="headerlink" title="AnimatedContainer处理动画详解"></a>AnimatedContainer处理动画详解</h2><p>Flutter对Container动画组件的一个封装<br>使用AnimatedContainer包裹住我们的组件，即可实现动画操作。</p>
+<h2 id="Hero动画使用方式详解"><a href="#Hero动画使用方式详解" class="headerlink" title="Hero动画使用方式详解"></a>Hero动画使用方式详解</h2><p>Hero动画基本使用：</p>
+<h3 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h3><p>当使用Navigator或者使用PageRoute导航到一个新页面，整个屏幕的内容都会被替换。如果这两个路由上都有一个<br>公共的UI展示，那么在路由跳转时，Hero动画就可以用得上。Hero组件小部件在过渡期间<br>会在Navigator上“飞行”，并且在飞行过程中默认情况下，他们不会在新旧路线的原始位置中<br>显示。由于具有共享的特性，Hero动画又被称作“共享元素动画”。</p>
+<h2 id="Flutter路由动画处理使用详解"><a href="#Flutter路由动画处理使用详解" class="headerlink" title="Flutter路由动画处理使用详解"></a>Flutter路由动画处理使用详解</h2><p>关键属性：</p>
+<ol>
+<li>PageRouteBuilder：字定义路由器切换的一个管理类</li>
+<li>pageBuilder：返回需要跳转的目标页面</li>
+<li>transitionsBuilder：自定义路由切换动画</li>
+<li>transitionDuration：动画时长。</li>
+</ol>
+<h2 id="Flare动画加载和使用"><a href="#Flare动画加载和使用" class="headerlink" title="Flare动画加载和使用"></a>Flare动画加载和使用</h2><h4 id="Flare动画介绍"><a href="#Flare动画介绍" class="headerlink" title="Flare动画介绍"></a>Flare动画介绍</h4><p>2D矢量动画程序</p>
+<h4 id="Flare动画资源配置"><a href="#Flare动画资源配置" class="headerlink" title="Flare动画资源配置"></a>Flare动画资源配置</h4><ol>
+<li>登陆<a href="http://www.2dimensions.com" target="_blank" rel="noopener">http://www.2dimensions.com</a>     下载想要的动画资源</li>
+<li>添加flare_flutter库</li>
+<li>在pubspec.yaml里面配置.flr文件（即flare动画资源）</li>
+</ol>
+<h4 id="加载Flare动画"><a href="#加载Flare动画" class="headerlink" title="加载Flare动画"></a>加载Flare动画</h4><p>使用FlareActor组件加载本地.flr文件</p>
+<h2 id="Flutter动画遇到的问题及其解决方案"><a href="#Flutter动画遇到的问题及其解决方案" class="headerlink" title="Flutter动画遇到的问题及其解决方案"></a>Flutter动画遇到的问题及其解决方案</h2><ol>
+<li>没有在pubspec.yaml配置资源，导致加载Flare动画失败。</li>
+<li>动画资源在Web上失效，在设备运行无效。</li>
+<li>动画耗费资源较多，不用时及时释放资源。</li>
+<li>动画的初始化问题。</li>
+</ol>
+<h2 id="Flutter动画处理总结"><a href="#Flutter动画处理总结" class="headerlink" title="Flutter动画处理总结"></a>Flutter动画处理总结</h2><ol>
+<li>主要介绍了Flutter动画的基本使用</li>
+<li>详细介绍了Flare动画的配置加载和使用</li>
+<li>了解动画使用中遇到的问题及其解决方案</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/Flutter/" rel="tag"># Flutter</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2020/02/05/flutter-learning-log/" rel="next" title="Flutter学习日记1">
+                  <i class="fa fa-chevron-left"></i> Flutter学习日记1
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2020/02/27/flutter_learning_log3/" rel="prev" title="Flutter学习日记3">
+                  Flutter学习日记3 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Inhaltsverzeichnis
+        </li>
+        <li class="sidebar-nav-overview">
+          Übersicht
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Flutter-常用组件介绍"><span class="nav-number">1.</span> <span class="nav-text">Flutter 常用组件介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#了解Flutter组件是什么"><span class="nav-number">1.1.</span> <span class="nav-text">了解Flutter组件是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Flutter组件分类"><span class="nav-number">1.1.1.</span> <span class="nav-text">Flutter组件分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#文字类型"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">文字类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#容器类型"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">容器类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#辅助提示类型"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">辅助提示类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#列表类型"><span class="nav-number">1.1.1.4.</span> <span class="nav-text">列表类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#系统主题风格类型"><span class="nav-number">1.1.1.5.</span> <span class="nav-text">系统主题风格类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#交互类型"><span class="nav-number">1.1.1.6.</span> <span class="nav-text">交互类型</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#了解常用的Flutter组件有哪些（重点）"><span class="nav-number">1.2.</span> <span class="nav-text">了解常用的Flutter组件有哪些（重点）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#掌握常用Flutter组件的使用"><span class="nav-number">1.3.</span> <span class="nav-text">掌握常用Flutter组件的使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用Flutter组件构建一个完整的页面布局（难点）"><span class="nav-number">1.4.</span> <span class="nav-text">使用Flutter组件构建一个完整的页面布局（难点）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#构建布局的技巧"><span class="nav-number">1.4.1.</span> <span class="nav-text">构建布局的技巧</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用StatelessWidget和StatefulWidget"><span class="nav-number">1.4.2.</span> <span class="nav-text">使用StatelessWidget和StatefulWidget</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#根据UI图，构建静态以及可交互的布局"><span class="nav-number">1.4.3.</span> <span class="nav-text">根据UI图，构建静态以及可交互的布局</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.5.</span> <span class="nav-text">总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#本章介绍了Flutter常用组件有哪些"><span class="nav-number">1.5.1.</span> <span class="nav-text">本章介绍了Flutter常用组件有哪些</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#详细介绍了Flutter常用组件的使用"><span class="nav-number">1.5.2.</span> <span class="nav-text">详细介绍了Flutter常用组件的使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何根据UI图构建一个完整的可交互的布局"><span class="nav-number">1.5.3.</span> <span class="nav-text">如何根据UI图构建一个完整的可交互的布局</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#页面交互路由与导航详解——路由常用API详解"><span class="nav-number">2.</span> <span class="nav-text">页面交互路由与导航详解——路由常用API详解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#掌握路由跳转的几种方式（重点）"><span class="nav-number">2.1.</span> <span class="nav-text">掌握路由跳转的几种方式（重点）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单一页面跳转"><span class="nav-number">2.1.1.</span> <span class="nav-text">单一页面跳转</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多个页面路由管理"><span class="nav-number">2.1.2.</span> <span class="nav-text">多个页面路由管理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#路由常用函数API详解"><span class="nav-number">2.2.</span> <span class="nav-text">路由常用函数API详解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用"><span class="nav-number">2.2.1.</span> <span class="nav-text">常用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#需要了解"><span class="nav-number">2.2.2.</span> <span class="nav-text">需要了解</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#掌握路由的发送和接收数据的使用（难点）"><span class="nav-number">2.3.</span> <span class="nav-text">掌握路由的发送和接收数据的使用（难点）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#发送数据"><span class="nav-number">2.3.1.</span> <span class="nav-text">发送数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接收数据"><span class="nav-number">2.3.2.</span> <span class="nav-text">接收数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发送并接收其他页面返回的数据"><span class="nav-number">2.3.3.</span> <span class="nav-text">发送并接收其他页面返回的数据</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#熟悉路由使用中遇到的问题及解决"><span class="nav-number">2.4.</span> <span class="nav-text">熟悉路由使用中遇到的问题及解决</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主题风格的一致性"><span class="nav-number">2.4.1.</span> <span class="nav-text">主题风格的一致性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主页面和非主页面跳转方式选择不太一样"><span class="nav-number">2.4.2.</span> <span class="nav-text">主页面和非主页面跳转方式选择不太一样</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scaffold组件的body属性值为具体组件名称，接收不到路由返回的数据"><span class="nav-number">2.4.3.</span> <span class="nav-text">Scaffold组件的body属性值为具体组件名称，接收不到路由返回的数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目标页面可以写main函数，也可以不写，首页写上main函数，其他页面不写，便于查找和维护"><span class="nav-number">2.4.4.</span> <span class="nav-text">目标页面可以写main函数，也可以不写，首页写上main函数，其他页面不写，便于查找和维护</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#路由路径的正确性，传参的一致性的问题"><span class="nav-number">2.4.5.</span> <span class="nav-text">路由路径的正确性，传参的一致性的问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结-1"><span class="nav-number">2.5.</span> <span class="nav-text">总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主要介绍了路由跳转的几种方式"><span class="nav-number">2.5.1.</span> <span class="nav-text">主要介绍了路由跳转的几种方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#详细讲解了路由的发送和接受数据的使用"><span class="nav-number">2.5.2.</span> <span class="nav-text">详细讲解了路由的发送和接受数据的使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#熟悉路由使用中遇到的问题及解决-1"><span class="nav-number">2.5.3.</span> <span class="nav-text">熟悉路由使用中遇到的问题及解决</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GestureDetector生命周期（常用）"><span class="nav-number">2.6.</span> <span class="nav-text">GestureDetector生命周期（常用）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GestureDetector多事件混合使用详解"><span class="nav-number">2.7.</span> <span class="nav-text">GestureDetector多事件混合使用详解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#长按和Pan事件"><span class="nav-number">2.7.1.</span> <span class="nav-text">长按和Pan事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tap和Pan事件"><span class="nav-number">2.7.2.</span> <span class="nav-text">Tap和Pan事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#垂直滑动和Pan事件"><span class="nav-number">2.7.3.</span> <span class="nav-text">垂直滑动和Pan事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#水平滑动和Pan事件"><span class="nav-number">2.7.4.</span> <span class="nav-text">水平滑动和Pan事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scale和Tap事件"><span class="nav-number">2.7.5.</span> <span class="nav-text">Scale和Tap事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#双击、Tap和Pan事件"><span class="nav-number">2.7.6.</span> <span class="nav-text">双击、Tap和Pan事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FloatingActionButton"><span class="nav-number">2.7.7.</span> <span class="nav-text">FloatingActionButton</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RaisedButton"><span class="nav-number">2.7.8.</span> <span class="nav-text">RaisedButton</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IconButton"><span class="nav-number">2.7.9.</span> <span class="nav-text">IconButton</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ToggleButtons"><span class="nav-number">2.7.10.</span> <span class="nav-text">ToggleButtons</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用Ink和InkWell组件实现事件操作"><span class="nav-number">2.8.</span> <span class="nav-text">使用Ink和InkWell组件实现事件操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#手势操作遇到的问题及解决"><span class="nav-number">2.9.</span> <span class="nav-text">手势操作遇到的问题及解决</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Pan和Scale不能同时使用"><span class="nav-number">2.9.1.</span> <span class="nav-text">Pan和Scale不能同时使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#垂直和水平事件不能同时使用"><span class="nav-number">2.9.2.</span> <span class="nav-text">垂直和水平事件不能同时使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#双击事件要获取坐标，需要和Pan事件同时使用"><span class="nav-number">2.9.3.</span> <span class="nav-text">双击事件要获取坐标，需要和Pan事件同时使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#手势处理综合使用实例操作实战"><span class="nav-number">2.10.</span> <span class="nav-text">手势处理综合使用实例操作实战</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GestureDetector"><span class="nav-number">2.10.1.</span> <span class="nav-text">GestureDetector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用带有事件操作的组件"><span class="nav-number">2.10.2.</span> <span class="nav-text">使用带有事件操作的组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Ink，InkWell或InkResponse组件"><span class="nav-number">2.10.3.</span> <span class="nav-text">使用Ink，InkWell或InkResponse组件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结-2"><span class="nav-number">2.11.</span> <span class="nav-text">总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主要介绍了手势处理的三种方式"><span class="nav-number">2.11.1.</span> <span class="nav-text">主要介绍了手势处理的三种方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#了解GestureDetector生命周期"><span class="nav-number">2.11.2.</span> <span class="nav-text">了解GestureDetector生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过一个案例讲解，熟悉GestureDetector使用"><span class="nav-number">2.11.3.</span> <span class="nav-text">通过一个案例讲解，熟悉GestureDetector使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#了解手势处理遇到的问题及解决"><span class="nav-number">2.11.4.</span> <span class="nav-text">了解手势处理遇到的问题及解决</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#熟悉常用带事件处理的组件"><span class="nav-number">2.11.5.</span> <span class="nav-text">熟悉常用带事件处理的组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#掌握Ink、InkWell和InkResponse组件进行事件操作"><span class="nav-number">2.11.6.</span> <span class="nav-text">掌握Ink、InkWell和InkResponse组件进行事件操作</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Flutter动画处理"><span class="nav-number">3.</span> <span class="nav-text">Flutter动画处理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#本章目标"><span class="nav-number">3.1.</span> <span class="nav-text">本章目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Flutter动画的类型"><span class="nav-number">3.2.</span> <span class="nav-text">Flutter动画的类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tween动画"><span class="nav-number">3.2.1.</span> <span class="nav-text">Tween动画</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AnimatedBuilder"><span class="nav-number">3.2.2.</span> <span class="nav-text">AnimatedBuilder</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AnimatedContainer"><span class="nav-number">3.2.3.</span> <span class="nav-text">AnimatedContainer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hero动画"><span class="nav-number">3.2.4.</span> <span class="nav-text">Hero动画</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flare动画"><span class="nav-number">3.2.5.</span> <span class="nav-text">Flare动画</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tween动画使用方式详解"><span class="nav-number">3.3.</span> <span class="nav-text">Tween动画使用方式详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tween和AnimationController的区别"><span class="nav-number">3.4.</span> <span class="nav-text">Tween和AnimationController的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#相同：他们都是Animation的子类型，都具有最小值、最大值的属性。"><span class="nav-number">3.4.0.1.</span> <span class="nav-text">相同：他们都是Animation的子类型，都具有最小值、最大值的属性。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#不同："><span class="nav-number">3.4.0.2.</span> <span class="nav-text">不同：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-AnimationController只是一个控制器，包括：动画时长、初始值、结束值等属性。"><span class="nav-number">3.4.0.2.1.</span> <span class="nav-text">1.AnimationController只是一个控制器，包括：动画时长、初始值、结束值等属性。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-Tween用于转化动画输出的对象，可以通过调用animate函数，传入各种丰富的动画类型，比如CurvedAnimation动画。"><span class="nav-number">3.4.0.2.2.</span> <span class="nav-text">2.Tween用于转化动画输出的对象，可以通过调用animate函数，传入各种丰富的动画类型，比如CurvedAnimation动画。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-AnimationController可以单独使用，但是Tween离不开AnimationController。"><span class="nav-number">3.4.0.2.3.</span> <span class="nav-text">3.AnimationController可以单独使用，但是Tween离不开AnimationController。</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AnimatedBuilder处理动画详解"><span class="nav-number">3.5.</span> <span class="nav-text">AnimatedBuilder处理动画详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AnimatedContainer处理动画详解"><span class="nav-number">3.6.</span> <span class="nav-text">AnimatedContainer处理动画详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hero动画使用方式详解"><span class="nav-number">3.7.</span> <span class="nav-text">Hero动画使用方式详解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义："><span class="nav-number">3.7.1.</span> <span class="nav-text">定义：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Flutter路由动画处理使用详解"><span class="nav-number">3.8.</span> <span class="nav-text">Flutter路由动画处理使用详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Flare动画加载和使用"><span class="nav-number">3.9.</span> <span class="nav-text">Flare动画加载和使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Flare动画介绍"><span class="nav-number">3.9.0.1.</span> <span class="nav-text">Flare动画介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Flare动画资源配置"><span class="nav-number">3.9.0.2.</span> <span class="nav-text">Flare动画资源配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#加载Flare动画"><span class="nav-number">3.9.0.3.</span> <span class="nav-text">加载Flare动画</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Flutter动画遇到的问题及其解决方案"><span class="nav-number">3.10.</span> <span class="nav-text">Flutter动画遇到的问题及其解决方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Flutter动画处理总结"><span class="nav-number">3.11.</span> <span class="nav-text">Flutter动画处理总结</span></a></li></ol></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Chen Lianhan</p>
+  <div class="site-description" itemprop="description">Just a simple programmer!</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">Artikel</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">Kategorien</span>
+        
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">schlagwörter</span>
+        
+      </div>
+    
+  </nav>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/chenlianhan" title="GitHub &rarr; https://github.com/chenlianhan" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:chenlh53@mail2.sysu.edu.cn" title="E-Mail &rarr; mailto:chenlh53@mail2.sysu.edu.cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://space.bilibili.com/33035816" title="Bilibili &rarr; https://space.bilibili.com/33035816" rel="noopener" target="_blank"><i class="fa fa-fw fa-youtube"></i>Bilibili</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Chen Lianhan</span>
+</div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.4.0</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+
+
+    
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
+<script src="/js/schemes/muse.js?v=7.4.0"></script>
+
+<script src="/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
