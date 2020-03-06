@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-06T05:14:39.293Z</updated>
+  <updated>2020-03-06T05:33:38.422Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>analog-circuit-experiment-report</title>
+    <link href="http://yoursite.com/2020/03/06/analog-circuit-experiment-report/"/>
+    <id>http://yoursite.com/2020/03/06/analog-circuit-experiment-report/</id>
+    <published>2020-03-06T05:31:27.000Z</published>
+    <updated>2020-03-06T05:33:38.422Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="模拟电路期末大实验实验报告"><a href="#模拟电路期末大实验实验报告" class="headerlink" title="模拟电路期末大实验实验报告"></a>模拟电路期末大实验实验报告</h1><p>直接上传PDF</p><object data="./analog-circuit-experiment-report/report.pdf" type="application/pdf" width="100%" height="100%"></object>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;模拟电路期末大实验实验报告&quot;&gt;&lt;a href=&quot;#模拟电路期末大实验实验报告&quot; class=&quot;headerlink&quot; title=&quot;模拟电路期末大实验实验报告&quot;&gt;&lt;/a&gt;模拟电路期末大实验实验报告&lt;/h1&gt;&lt;p&gt;直接上传PDF&lt;/p&gt;
+&lt;object data=&quot;
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Flutter学习日记3</title>
