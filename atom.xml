@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-06T06:59:02.309Z</updated>
+  <updated>2020-03-06T07:04:36.604Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于树莓派的实时监控系统设计</title>
+    <link href="http://yoursite.com/2020/03/06/%E5%9F%BA%E4%BA%8E%E6%A0%91%E8%8E%93%E6%B4%BE%E7%9A%84%E5%AE%9E%E6%97%B6%E7%9B%91%E6%8E%A7%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"/>
+    <id>http://yoursite.com/2020/03/06/基于树莓派的实时监控系统设计/</id>
+    <published>2020-03-06T07:03:07.000Z</published>
+    <updated>2020-03-06T07:04:36.604Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><p><img src="0002.jpg" alt><br><img src="0003.jpg" alt><br><img src="0004.jpg" alt><br><img src="0005.jpg" alt><br><img src="0006.jpg" alt><br><img src="0007.jpg" alt><br><img src="0008.jpg" alt><br><img src="0009.jpg" alt><br><img src="0010.jpg" alt><br><img src="0011.jpg" alt><br><img src="0012.jpg" alt><br><img src="0013.jpg" alt><br><img src="0014.jpg" alt><br><img src="0015.jpg" alt><br><img src="0016.jpg" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+&lt;p&gt;&lt;img src=&quot;0002.jpg&quot; alt&gt;&lt;br&gt;&lt;img src=&quot;0003.jpg&quot; alt&gt;&lt;br&gt;&lt;img src=&quot;0004.jpg&quot; alt&gt;&lt;br&gt;&lt;img src=&quot;0005.jpg&quot; alt&gt;&lt;br&gt;&lt;img s
+      
+    
+    </summary>
+    
+    
+    
+      <category term="reports" scheme="http://yoursite.com/tags/reports/"/>
+    
+  </entry>
   
   <entry>
     <title>基于Mathematica的信号系统与处理</title>
