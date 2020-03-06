@@ -4,7 +4,7 @@
 
 
 
-<html lang="zh-en">
+<html lang="zh-Hans">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -26,7 +26,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
+    scheme: 'Gemini',
     version: '7.4.0',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
@@ -56,18 +56,18 @@
   };
 </script>
 
-  <meta name="description" content="Flutter 常用组件介绍了解Flutter组件是什么Flutter组件分类文字类型用于描述文字，比如Text，字体的颜色大小，下划线，风格等等 容器类型辅助提示类型列表类型系统主题风格类型交互类型了解常用的Flutter组件有哪些（重点）掌握常用Flutter组件的使用使用Flutter组件构建一个完整的页面布局（难点）构建布局的技巧使用StatelessWidget和StatefulWidg">
+  <meta name="description" content="Flutter 常用组件介绍了解Flutter组件是什么Flutter组件分类文字类型用于描述文字，比如Text，字体的颜色大小，下划线，风格等等 容器类型">
 <meta name="keywords" content="Flutter">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Flutter学习日记2">
 <meta property="og:url" content="http://yoursite.com/2020/02/06/flutter-learning-log2/index.html">
 <meta property="og:site_name" content="Chen Lianhan">
-<meta property="og:description" content="Flutter 常用组件介绍了解Flutter组件是什么Flutter组件分类文字类型用于描述文字，比如Text，字体的颜色大小，下划线，风格等等 容器类型辅助提示类型列表类型系统主题风格类型交互类型了解常用的Flutter组件有哪些（重点）掌握常用Flutter组件的使用使用Flutter组件构建一个完整的页面布局（难点）构建布局的技巧使用StatelessWidget和StatefulWidg">
-<meta property="og:locale" content="zh-en">
-<meta property="og:updated_time" content="2020-03-06T04:21:42.969Z">
+<meta property="og:description" content="Flutter 常用组件介绍了解Flutter组件是什么Flutter组件分类文字类型用于描述文字，比如Text，字体的颜色大小，下划线，风格等等 容器类型">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-03-06T04:55:45.903Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Flutter学习日记2">
-<meta name="twitter:description" content="Flutter 常用组件介绍了解Flutter组件是什么Flutter组件分类文字类型用于描述文字，比如Text，字体的颜色大小，下划线，风格等等 容器类型辅助提示类型列表类型系统主题风格类型交互类型了解常用的Flutter组件有哪些（重点）掌握常用Flutter组件的使用使用Flutter组件构建一个完整的页面布局（难点）构建布局的技巧使用StatelessWidget和StatefulWidg">
+<meta name="twitter:description" content="Flutter 常用组件介绍了解Flutter组件是什么Flutter组件分类文字类型用于描述文字，比如Text，字体的颜色大小，下划线，风格等等 容器类型">
   <link rel="canonical" href="http://yoursite.com/2020/02/06/flutter-learning-log2/">
 
 
@@ -118,7 +118,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-en">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
   <div class="container use-motion">
     <div class="headband"></div>
 
@@ -196,8 +196,6 @@
   </li>
   </ul>
 
-    
-
 </nav>
 </div>
     </header>
@@ -212,6 +210,8 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+            
+
           <div id="content" class="content">
             
 
@@ -260,7 +260,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Bearbeitet am</span>
-                <time title="Geändert am: 2020-03-06 12:21:42" itemprop="dateModified" datetime="2020-03-06T12:21:42+08:00">2020-03-06</time>
+                <time title="Geändert am: 2020-03-06 12:55:45" itemprop="dateModified" datetime="2020-03-06T12:55:45+08:00">2020-03-06</time>
               </span>
             
           
@@ -290,8 +290,8 @@
 
       
         <h1 id="Flutter-常用组件介绍"><a href="#Flutter-常用组件介绍" class="headerlink" title="Flutter 常用组件介绍"></a>Flutter 常用组件介绍</h1><h2 id="了解Flutter组件是什么"><a href="#了解Flutter组件是什么" class="headerlink" title="了解Flutter组件是什么"></a>了解Flutter组件是什么</h2><h3 id="Flutter组件分类"><a href="#Flutter组件分类" class="headerlink" title="Flutter组件分类"></a>Flutter组件分类</h3><h4 id="文字类型"><a href="#文字类型" class="headerlink" title="文字类型"></a>文字类型</h4><p>用于描述文字，比如<code>Text</code>，字体的颜色大小，下划线，风格等等</p>
-<h4 id="容器类型"><a href="#容器类型" class="headerlink" title="容器类型"></a>容器类型</h4><h4 id="辅助提示类型"><a href="#辅助提示类型" class="headerlink" title="辅助提示类型"></a>辅助提示类型</h4><h4 id="列表类型"><a href="#列表类型" class="headerlink" title="列表类型"></a>列表类型</h4><h4 id="系统主题风格类型"><a href="#系统主题风格类型" class="headerlink" title="系统主题风格类型"></a>系统主题风格类型</h4><h4 id="交互类型"><a href="#交互类型" class="headerlink" title="交互类型"></a>交互类型</h4><h2 id="了解常用的Flutter组件有哪些（重点）"><a href="#了解常用的Flutter组件有哪些（重点）" class="headerlink" title="了解常用的Flutter组件有哪些（重点）"></a>了解常用的Flutter组件有哪些（重点）</h2><h2 id="掌握常用Flutter组件的使用"><a href="#掌握常用Flutter组件的使用" class="headerlink" title="掌握常用Flutter组件的使用"></a>掌握常用Flutter组件的使用</h2><h2 id="使用Flutter组件构建一个完整的页面布局（难点）"><a href="#使用Flutter组件构建一个完整的页面布局（难点）" class="headerlink" title="使用Flutter组件构建一个完整的页面布局（难点）"></a>使用Flutter组件构建一个完整的页面布局（难点）</h2><h3 id="构建布局的技巧"><a href="#构建布局的技巧" class="headerlink" title="构建布局的技巧"></a>构建布局的技巧</h3><h3 id="使用StatelessWidget和StatefulWidget"><a href="#使用StatelessWidget和StatefulWidget" class="headerlink" title="使用StatelessWidget和StatefulWidget"></a>使用StatelessWidget和StatefulWidget</h3><h3 id="根据UI图，构建静态以及可交互的布局"><a href="#根据UI图，构建静态以及可交互的布局" class="headerlink" title="根据UI图，构建静态以及可交互的布局"></a>根据UI图，构建静态以及可交互的布局</h3><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h3 id="本章介绍了Flutter常用组件有哪些"><a href="#本章介绍了Flutter常用组件有哪些" class="headerlink" title="本章介绍了Flutter常用组件有哪些"></a>本章介绍了Flutter常用组件有哪些</h3><h3 id="详细介绍了Flutter常用组件的使用"><a href="#详细介绍了Flutter常用组件的使用" class="headerlink" title="详细介绍了Flutter常用组件的使用"></a>详细介绍了Flutter常用组件的使用</h3><h3 id="如何根据UI图构建一个完整的可交互的布局"><a href="#如何根据UI图构建一个完整的可交互的布局" class="headerlink" title="如何根据UI图构建一个完整的可交互的布局"></a>如何根据UI图构建一个完整的可交互的布局</h3><a id="more"></a>
-<h1 id="页面交互路由与导航详解——路由常用API详解"><a href="#页面交互路由与导航详解——路由常用API详解" class="headerlink" title="页面交互路由与导航详解——路由常用API详解"></a>页面交互路由与导航详解——路由常用API详解</h1><h2 id="掌握路由跳转的几种方式（重点）"><a href="#掌握路由跳转的几种方式（重点）" class="headerlink" title="掌握路由跳转的几种方式（重点）"></a>掌握路由跳转的几种方式（重点）</h2><h3 id="单一页面跳转"><a href="#单一页面跳转" class="headerlink" title="单一页面跳转"></a>单一页面跳转</h3><p>使用 Navigator.of(context).push()或者Navigator.of(context).pop()进行单一页面的跳转</p>
+<h4 id="容器类型"><a href="#容器类型" class="headerlink" title="容器类型"></a>容器类型</h4><a id="more"></a>
+<h4 id="辅助提示类型"><a href="#辅助提示类型" class="headerlink" title="辅助提示类型"></a>辅助提示类型</h4><h4 id="列表类型"><a href="#列表类型" class="headerlink" title="列表类型"></a>列表类型</h4><h4 id="系统主题风格类型"><a href="#系统主题风格类型" class="headerlink" title="系统主题风格类型"></a>系统主题风格类型</h4><h4 id="交互类型"><a href="#交互类型" class="headerlink" title="交互类型"></a>交互类型</h4><h2 id="了解常用的Flutter组件有哪些（重点）"><a href="#了解常用的Flutter组件有哪些（重点）" class="headerlink" title="了解常用的Flutter组件有哪些（重点）"></a>了解常用的Flutter组件有哪些（重点）</h2><h2 id="掌握常用Flutter组件的使用"><a href="#掌握常用Flutter组件的使用" class="headerlink" title="掌握常用Flutter组件的使用"></a>掌握常用Flutter组件的使用</h2><h2 id="使用Flutter组件构建一个完整的页面布局（难点）"><a href="#使用Flutter组件构建一个完整的页面布局（难点）" class="headerlink" title="使用Flutter组件构建一个完整的页面布局（难点）"></a>使用Flutter组件构建一个完整的页面布局（难点）</h2><h3 id="构建布局的技巧"><a href="#构建布局的技巧" class="headerlink" title="构建布局的技巧"></a>构建布局的技巧</h3><h3 id="使用StatelessWidget和StatefulWidget"><a href="#使用StatelessWidget和StatefulWidget" class="headerlink" title="使用StatelessWidget和StatefulWidget"></a>使用StatelessWidget和StatefulWidget</h3><h3 id="根据UI图，构建静态以及可交互的布局"><a href="#根据UI图，构建静态以及可交互的布局" class="headerlink" title="根据UI图，构建静态以及可交互的布局"></a>根据UI图，构建静态以及可交互的布局</h3><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h3 id="本章介绍了Flutter常用组件有哪些"><a href="#本章介绍了Flutter常用组件有哪些" class="headerlink" title="本章介绍了Flutter常用组件有哪些"></a>本章介绍了Flutter常用组件有哪些</h3><h3 id="详细介绍了Flutter常用组件的使用"><a href="#详细介绍了Flutter常用组件的使用" class="headerlink" title="详细介绍了Flutter常用组件的使用"></a>详细介绍了Flutter常用组件的使用</h3><h3 id="如何根据UI图构建一个完整的可交互的布局"><a href="#如何根据UI图构建一个完整的可交互的布局" class="headerlink" title="如何根据UI图构建一个完整的可交互的布局"></a>如何根据UI图构建一个完整的可交互的布局</h3><h1 id="页面交互路由与导航详解——路由常用API详解"><a href="#页面交互路由与导航详解——路由常用API详解" class="headerlink" title="页面交互路由与导航详解——路由常用API详解"></a>页面交互路由与导航详解——路由常用API详解</h1><h2 id="掌握路由跳转的几种方式（重点）"><a href="#掌握路由跳转的几种方式（重点）" class="headerlink" title="掌握路由跳转的几种方式（重点）"></a>掌握路由跳转的几种方式（重点）</h2><h3 id="单一页面跳转"><a href="#单一页面跳转" class="headerlink" title="单一页面跳转"></a>单一页面跳转</h3><p>使用 Navigator.of(context).push()或者Navigator.of(context).pop()进行单一页面的跳转</p>
 <h3 id="多个页面路由管理"><a href="#多个页面路由管理" class="headerlink" title="多个页面路由管理"></a>多个页面路由管理</h3><p>使用 Map&lt;String, WidgetBuilder&gt; xxx = {‘pageone’:(builder){return 页面函数();},…};对所有相关的路由页面进行一个统一定义和管理。</p>
 <p>再在MaterialApp里面定义好home（主页面）和initialRoute和routes，其中routes就是上面定义的map路由信息管理。</p>
 <h2 id="路由常用函数API详解"><a href="#路由常用函数API详解" class="headerlink" title="路由常用函数API详解"></a>路由常用函数API详解</h2><h3 id="常用"><a href="#常用" class="headerlink" title="常用"></a>常用</h3><p>push：将设置的router信息推送到Navigator上，实现页面跳转</p>
@@ -672,7 +672,7 @@
 </div>
   <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.4.0</div>
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.4.0</div>
 
         
 
@@ -702,7 +702,7 @@
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 <script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
-<script src="/js/schemes/muse.js?v=7.4.0"></script>
+<script src="/js/schemes/pisces.js?v=7.4.0"></script>
 
 <script src="/js/next-boot.js?v=7.4.0"></script>
 
