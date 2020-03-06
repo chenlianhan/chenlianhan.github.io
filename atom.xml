@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-06T06:51:23.954Z</updated>
+  <updated>2020-03-06T06:59:02.309Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于Mathematica的信号系统与处理</title>
+    <link href="http://yoursite.com/2020/03/06/%E5%9F%BA%E4%BA%8EMathematica%E7%9A%84%E4%BF%A1%E5%8F%B7%E7%B3%BB%E7%BB%9F%E4%B8%8E%E5%A4%84%E7%90%86/"/>
+    <id>http://yoursite.com/2020/03/06/基于Mathematica的信号系统与处理/</id>
+    <published>2020-03-06T06:58:03.000Z</published>
+    <updated>2020-03-06T06:59:02.309Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><p><img src="0001.jpg" alt><br><img src="0002.jpg" alt><br><img src="0003.jpg" alt><br><img src="0004.jpg" alt><br><img src="0005.jpg" alt><br><img src="0006.jpg" alt><br><img src="0007.jpg" alt><br><img src="0008.jpg" alt><br><img src="0009.jpg" alt><br><img src="0010.jpg" alt><br><img src="0011.jpg" alt><br><img src="0012.jpg" alt><br><img src="0013.jpg" alt><br><img src="0014.jpg" alt><br><img src="0015.jpg" alt><br><img src="0016.jpg" alt><br><img src="0017.jpg" alt><br><img src="0018.jpg" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;img src=&quot;0001.jpg&quot; alt&gt;&lt;br&gt;&lt;img src=&quot;0002.jpg&quot; alt&gt;&lt;br&gt;&lt;img src=&quot;0003.jpg&quot; alt&gt;&lt;br&gt;&lt;img src=&quot;0004.jpg&quot; alt&gt;&lt;br&gt;&lt;img sr
+      
+    
+    </summary>
+    
+    
+    
+      <category term="reports" scheme="http://yoursite.com/tags/reports/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LATEX符号大全</title>
+    <link href="http://yoursite.com/2020/03/06/LATEX%E7%AC%A6%E5%8F%B7%E5%A4%A7%E5%85%A8/"/>
+    <id>http://yoursite.com/2020/03/06/LATEX符号大全/</id>
+    <published>2020-03-06T06:54:04.000Z</published>
+    <updated>2020-03-06T06:55:20.376Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><p><img src="0001.jpg" alt><br><img src="0002.jpg" alt><br><img src="0003.jpg" alt><br><img src="0004.jpg" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;img src=&quot;0001.jpg&quot; alt&gt;&lt;br&gt;&lt;img src=&quot;0002.jpg&quot; alt&gt;&lt;br&gt;&lt;img src=&quot;0003.jpg&quot; alt&gt;&lt;br&gt;&lt;img src=&quot;0004.jpg&quot; alt&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+    
+      <category term="doc" scheme="http://yoursite.com/tags/doc/"/>
+    
+  </entry>
   
   <entry>
     <title>模拟电路期末实验报告</title>
