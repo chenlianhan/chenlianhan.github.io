@@ -64,7 +64,7 @@
 <meta property="og:site_name" content="Chen Lianhan">
 <meta property="og:description" content="Flutter多媒体资源详解本章目标 了解pubspec.yaml文件，数值如何在pubspec.yaml中添加相关配置项 掌握图片资源加载和使用 掌握自定义字体资源的加载和使用 掌握其他资源文件的加载和使用，如：文本、音频、视频文件（难点） 熟练使用如何通过资源达到UI适配（重点） Flutter多媒体资源使用遇到的问题及解决方案">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-06T04:21:54.911Z">
+<meta property="og:updated_time" content="2020-03-06T05:14:39.293Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Flutter学习日记3">
 <meta name="twitter:description" content="Flutter多媒体资源详解本章目标 了解pubspec.yaml文件，数值如何在pubspec.yaml中添加相关配置项 掌握图片资源加载和使用 掌握自定义字体资源的加载和使用 掌握其他资源文件的加载和使用，如：文本、音频、视频文件（难点） 熟练使用如何通过资源达到UI适配（重点） Flutter多媒体资源使用遇到的问题及解决方案">
@@ -260,7 +260,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-03-06 12:21:54" itemprop="dateModified" datetime="2020-03-06T12:21:54+08:00">2020-03-06</time>
+                <time title="Modified: 2020-03-06 13:14:39" itemprop="dateModified" datetime="2020-03-06T13:14:39+08:00">2020-03-06</time>
               </span>
             
           
@@ -300,14 +300,14 @@
 </ol>
 <p>注意字符串文件，必须填写正确，填写错误会报错。</p>
 <p>可以引用pub.dev的开源包，也可以使用git资源</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dependeies:</span><br><span class="line">	git:</span><br><span class="line">		库名称:</span><br><span class="line">			git:git://github.com/用户名或者组织名称/库名称.git  #使用https</span><br><span class="line">			git:git@github.com:用户名或者组织名称/库名称.git   #使用ssh</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dependeies:</span><br><span class="line">  git:</span><br><span class="line">	库名称:</span><br><span class="line">	  git:git://github.com/用户名或者组织名称/库名称.git  #使用https</span><br><span class="line">	  git:git@github.com:用户名或者组织名称/库名称.git   #使用ssh</span><br></pre></td></tr></table></figure>
 
 <p>下载或更新资源： <code>pub get ,  Flutter packages get , flutter pub get</code></p>
 <p>更新包：<code>flutter packages upgrade</code></p>
 <h2 id="Flutter处理图片资源详解"><a href="#Flutter处理图片资源详解" class="headerlink" title="Flutter处理图片资源详解"></a>Flutter处理图片资源详解</h2><p>例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">flutter:</span><br><span class="line">	assets:</span><br><span class="line">		- images/img_home.png</span><br><span class="line">		- images/img_tab.png</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">flutter:</span><br><span class="line">  assets:</span><br><span class="line">	- images/img_home.png</span><br><span class="line">	- images/img_tab.png</span><br></pre></td></tr></table></figure>
 
-<h2 id="Flutter处理字体资源详解"><a href="#Flutter处理字体资源详解" class="headerlink" title="Flutter处理字体资源详解"></a>Flutter处理字体资源详解</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">flutter:</span><br><span class="line">	fonts:</span><br><span class="line">		- family:Schyler</span><br><span class="line">		  fonts:</span><br><span class="line">			- asset:fonts/Schyler-Regular.ttf</span><br><span class="line">			- asset:fonts/Schyler-Italic.ttf</span><br><span class="line">				style:italic</span><br><span class="line">				weight:700</span><br></pre></td></tr></table></figure>
+<h2 id="Flutter处理字体资源详解"><a href="#Flutter处理字体资源详解" class="headerlink" title="Flutter处理字体资源详解"></a>Flutter处理字体资源详解</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">flutter:</span><br><span class="line">  fonts:</span><br><span class="line">   - family:Schyler</span><br><span class="line">	 fonts:</span><br><span class="line">	 - asset:fonts/Schyler-Regular.ttf</span><br><span class="line">	 - asset:fonts/Schyler-Italic.ttf</span><br><span class="line">	 style:italic</span><br><span class="line">	 weight:700</span><br></pre></td></tr></table></figure>
 
 <h2 id="Flutter处理文本资源详解"><a href="#Flutter处理文本资源详解" class="headerlink" title="Flutter处理文本资源详解"></a>Flutter处理文本资源详解</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">flutter:</span><br><span class="line">  assets:</span><br><span class="line">   - files/datas.xml</span><br><span class="line">   - files/datas.json</span><br><span class="line">   - files/data.txt</span><br></pre></td></tr></table></figure>
 
