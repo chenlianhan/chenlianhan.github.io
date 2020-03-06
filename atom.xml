@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-06T05:33:38.422Z</updated>
+  <updated>2020-03-06T05:42:43.820Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,21 +21,19 @@
     <link href="http://yoursite.com/2020/03/06/analog-circuit-experiment-report/"/>
     <id>http://yoursite.com/2020/03/06/analog-circuit-experiment-report/</id>
     <published>2020-03-06T05:31:27.000Z</published>
-    <updated>2020-03-06T05:33:38.422Z</updated>
+    <updated>2020-03-06T05:42:43.820Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="模拟电路期末大实验实验报告"><a href="#模拟电路期末大实验实验报告" class="headerlink" title="模拟电路期末大实验实验报告"></a>模拟电路期末大实验实验报告</h1><p>直接上传PDF</p><object data="./analog-circuit-experiment-report/report.pdf" type="application/pdf" width="100%" height="100%"></object>]]></content>
+    <content type="html"><![CDATA[<h1 id="模拟电路期末大实验实验报告"><a href="#模拟电路期末大实验实验报告" class="headerlink" title="模拟电路期末大实验实验报告"></a>模拟电路期末大实验实验报告</h1><p>直接上传PDF</p><a id="more"></a><br><div class="pdf" target="report.pdf" height></div><br>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h1 id=&quot;模拟电路期末大实验实验报告&quot;&gt;&lt;a href=&quot;#模拟电路期末大实验实验报告&quot; class=&quot;headerlink&quot; title=&quot;模拟电路期末大实验实验报告&quot;&gt;&lt;/a&gt;模拟电路期末大实验实验报告&lt;/h1&gt;&lt;p&gt;直接上传PDF&lt;/p&gt;
-&lt;object data=&quot;
-      
+      &lt;h1 id=&quot;模拟电路期末大实验实验报告&quot;&gt;&lt;a href=&quot;#模拟电路期末大实验实验报告&quot; class=&quot;headerlink&quot; title=&quot;模拟电路期末大实验实验报告&quot;&gt;&lt;/a&gt;模拟电路期末大实验实验报告&lt;/h1&gt;&lt;p&gt;直接上传PDF&lt;/p&gt;
     
     </summary>
     
     
+    
+      <category term="reports" scheme="http://yoursite.com/tags/reports/"/>
     
   </entry>
   
@@ -97,7 +95,7 @@
     <link href="http://yoursite.com/2020/02/05/flutter-learning-log/"/>
     <id>http://yoursite.com/2020/02/05/flutter-learning-log/</id>
     <published>2020-02-04T16:00:00.000Z</published>
-    <updated>2020-03-06T04:55:44.919Z</updated>
+    <updated>2020-03-06T05:40:28.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="第一章：跨平台框架介绍"><a href="#第一章：跨平台框架介绍" class="headerlink" title="第一章：跨平台框架介绍"></a>第一章：跨平台框架介绍</h1><h2 id="了解跨平台框架发展历史"><a href="#了解跨平台框架发展历史" class="headerlink" title="了解跨平台框架发展历史"></a>了解跨平台框架发展历史</h2><p>为什么会有跨平台框架的产生，在移动端刚开始出现时，安卓和IOS端的开发相互独立。从需求调研到上线测试，环节复杂，少则几个月多则一年。</p><p>随着移动端的逐渐发展，项目规模逐渐变大，所以为了尽快占有市场推出应用，减少开发成本和周期，因而产生了跨平台框架。</p><p>首先开始网页形式，入门简单，但不如原生流畅，性能不足且会受到浏览器限制。后来出现中间产品，既有原生组成也有WEB内容，好处在于原生开发人员和web开发人员需要密切配合。</p><a id="more"></a><p>最后便是，含有编译转换等系列功能的跨平台框架。其中便包括Flutter.</p><h2 id="Flutter介绍及其原理"><a href="#Flutter介绍及其原理" class="headerlink" title="Flutter介绍及其原理"></a>Flutter介绍及其原理</h2><p>Flutter是谷歌推出的跨平台项目，最早是Skia。使用Dart语言。可以运行在安卓和IOS上。</p><p>具有以下几个特点：</p><h3 id="Flutter是现代响应式框架"><a href="#Flutter是现代响应式框架" class="headerlink" title="Flutter是现代响应式框架"></a>Flutter是现代响应式框架</h3><p>我们在编写代码的同时，可以预览编译之后的效果，提高开发效率。</p><h3 id="快速的2D渲染引擎"><a href="#快速的2D渲染引擎" class="headerlink" title="快速的2D渲染引擎"></a>快速的2D渲染引擎</h3><p>独立的Skia渲染平台，通过GPU渲染，实现高质量的跨平台用户体验。高帧率60FPS.</p><h3 id="开发调试工具"><a href="#开发调试工具" class="headerlink" title="开发调试工具"></a>开发调试工具</h3><p>Flutter视图预览和Flutter预览调试，比较快捷方便。</p><h3 id="内置丰富的组件"><a href="#内置丰富的组件" class="headerlink" title="内置丰富的组件"></a>内置丰富的组件</h3><p>适用于安卓的material组件和适用于ios的cupertino组件。自由扩展和组合，不受手机限制。</p><h3 id="Flutter体系结构"><a href="#Flutter体系结构" class="headerlink" title="Flutter体系结构"></a>Flutter体系结构</h3><h4 id="Framework层"><a href="#Framework层" class="headerlink" title="Framework层"></a>Framework层</h4><h5 id="Material和Cupertino"><a href="#Material和Cupertino" class="headerlink" title="Material和Cupertino"></a>Material和Cupertino</h5><h5 id="Widgets"><a href="#Widgets" class="headerlink" title="Widgets"></a>Widgets</h5><h5 id="Rendering渲染层"><a href="#Rendering渲染层" class="headerlink" title="Rendering渲染层"></a>Rendering渲染层</h5><h5 id="Animation-Painting-Gestures"><a href="#Animation-Painting-Gestures" class="headerlink" title="Animation Painting Gestures"></a>Animation Painting Gestures</h5><h5 id="Foundation"><a href="#Foundation" class="headerlink" title="Foundation"></a>Foundation</h5><h4 id="Engine（C-）引擎层"><a href="#Engine（C-）引擎层" class="headerlink" title="Engine（C++）引擎层"></a>Engine（C++）引擎层</h4><h5 id="Skia（图形渲染引擎库）-Dart（VN虚拟机）-Text（文本渲染）"><a href="#Skia（图形渲染引擎库）-Dart（VN虚拟机）-Text（文本渲染）" class="headerlink" title="Skia（图形渲染引擎库） Dart（VN虚拟机） Text（文本渲染）"></a>Skia（图形渲染引擎库） Dart（VN虚拟机） Text（文本渲染）</h5><h2 id="面向对象及Dart语言介绍"><a href="#面向对象及Dart语言介绍" class="headerlink" title="面向对象及Dart语言介绍"></a>面向对象及Dart语言介绍</h2><h3 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h3><p>一种编程思想，主要是把任何事情都封装成对象，通过对象去操作。</p><h3 id="Dart语言"><a href="#Dart语言" class="headerlink" title="Dart语言"></a>Dart语言</h3><p>简洁，强类型（基础类型有明确要求，除了dynamic），面向对象的语言</p><p>支持即时编译（Just-In-time）和预编译（Ahead-of-time）：使用情况不同，包含断言调试工具与否以及包的大小</p><p>静态类型，可以在编译时捕获错误并在代码增长时管理代码</p><p>易于移植，Dart可以编译为ARM和X86代码，让移动端APP可以在iOS、Android和其他地方运行。</p><p>响应式编程，易于学习上手。</p><h2 id="Flutter和其他跨平台框架对比"><a href="#Flutter和其他跨平台框架对比" class="headerlink" title="Flutter和其他跨平台框架对比"></a>Flutter和其他跨平台框架对比</h2><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>通过本章介绍，基本了解Flutter是什么，原理是什么。</p><p>了解Dart语言。</p><h1 id="第二章：-环境搭建和遇到的问题解决"><a href="#第二章：-环境搭建和遇到的问题解决" class="headerlink" title="第二章： 环境搭建和遇到的问题解决"></a>第二章： 环境搭建和遇到的问题解决</h1><h2 id="环境搭建和问题解决"><a href="#环境搭建和问题解决" class="headerlink" title="环境搭建和问题解决"></a>环境搭建和问题解决</h2><h3 id="配置国内镜像"><a href="#配置国内镜像" class="headerlink" title="配置国内镜像"></a>配置国内镜像</h3><h3 id="配置Gradle工具和环境变量"><a href="#配置Gradle工具和环境变量" class="headerlink" title="配置Gradle工具和环境变量"></a>配置Gradle工具和环境变量</h3><h3 id="配置JDK和SDK环境，特别注意安装SDK时，需要同意android-licenses"><a href="#配置JDK和SDK环境，特别注意安装SDK时，需要同意android-licenses" class="headerlink" title="配置JDK和SDK环境，特别注意安装SDK时，需要同意android licenses"></a>配置JDK和SDK环境，特别注意安装SDK时，需要同意android licenses</h3><h3 id="Flutter打开很慢，需要配置加快打开速度"><a href="#Flutter打开很慢，需要配置加快打开速度" class="headerlink" title="Flutter打开很慢，需要配置加快打开速度"></a>Flutter打开很慢，需要配置加快打开速度</h3><p>解决：Android Studio安装目录下的bin目录，找到idea.properties文件，在文件最后追加以下代码disable.android.First.run = true,然后保存。</p><p>然后重启即可</p><h3 id="配置CPU支持，解决部分机型兼容性问题"><a href="#配置CPU支持，解决部分机型兼容性问题" class="headerlink" title="配置CPU支持，解决部分机型兼容性问题"></a>配置CPU支持，解决部分机型兼容性问题</h3><p>解决：根目录/android/app/build.gradle, 在android节点里添加以下内容：</p><p><code>splits{abi{include&#39;x86&#39;,&#39;armeabi-v7a&#39;,&#39;x86_64&#39;}}</code></p><h3 id="flutter-upgrade出现的红色错误提示"><a href="#flutter-upgrade出现的红色错误提示" class="headerlink" title="flutter upgrade出现的红色错误提示"></a>flutter upgrade出现的红色错误提示</h3><p>如：BitsTrAnsformer或CategoryInfo之类的关键字</p><h3 id="flutter-doctor（-v）出现的红色错误提示"><a href="#flutter-doctor（-v）出现的红色错误提示" class="headerlink" title="flutter doctor（-v）出现的红色错误提示"></a>flutter doctor（-v）出现的红色错误提示</h3><p>如：BitsTransformer或者CategoryInfo之类的关键字</p><h3 id="Some-Android-licenses-not-accepted-或-Android-licenses-status-unknown-的错误提示"><a href="#Some-Android-licenses-not-accepted-或-Android-licenses-status-unknown-的错误提示" class="headerlink" title="Some Android licenses not accepted. 或 Android licenses status unknown 的错误提示"></a>Some Android licenses not accepted. 或 Android licenses status unknown 的错误提示</h3><p>解决：命令行输入：</p><p><code>flutter doctor --android-licenses</code></p><p>根据提示输入y即可。</p><h2 id="常用命令行详解"><a href="#常用命令行详解" class="headerlink" title="常用命令行详解"></a>常用命令行详解</h2><p><code>--version 查看Flutter版本</code></p><p><code>-h 或--help 打印所有命令行的用法信息</code></p><p><code>doctor 展示了有关安装工具的信息</code></p><p><code>upgrade 升级你的Flutter项目</code></p><p><code>create 创建一个新的Flutter项目</code></p><p><code>run 在附加设备上运行你的Flutter应用程序</code></p><p><code>build Flutter构建命令</code></p><p><code>install 在附加设备上安装Flutter应用程序</code></p><p><code>devices 列出所有连接的设备</code></p><p><code>clean 删除构建/目录</code></p><p><code>analyze 分析项目的Dart代码</code></p><p><code>channel 列表或开关Flutter通道</code></p><p><code>packages 命令用于管理Flutter包</code></p><p><code>logs 显示用于运行Flutter应用程序的日志输出</code></p><h2 id="不同开发工具hello-world的体验"><a href="#不同开发工具hello-world的体验" class="headerlink" title="不同开发工具hello world的体验"></a>不同开发工具hello world的体验</h2><p>在命令行内输入</p><p><code>flutter create</code></p><p>使用IDE打开创建成功的目录</p><p><code>pubspec.yaml</code>   </p><p>是配置文件，插件和库的配置</p><p><code>flutter run</code></p><p>在指定的设备（手机或者是模拟器）上运行程序</p><h2 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h2><h3 id="掌握Flutter环境配置及遇到的问题解决"><a href="#掌握Flutter环境配置及遇到的问题解决" class="headerlink" title="掌握Flutter环境配置及遇到的问题解决"></a>掌握Flutter环境配置及遇到的问题解决</h3><h3 id="了解常用命令行，能够运用命令行解决一些问题"><a href="#了解常用命令行，能够运用命令行解决一些问题" class="headerlink" title="了解常用命令行，能够运用命令行解决一些问题"></a>了解常用命令行，能够运用命令行解决一些问题</h3><h3 id="能够使用不同工具运行Hello-World页面在设备上"><a href="#能够使用不同工具运行Hello-World页面在设备上" class="headerlink" title="能够使用不同工具运行Hello World页面在设备上"></a>能够使用不同工具运行Hello World页面在设备上</h3>]]></content>
     
